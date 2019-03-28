@@ -1,0 +1,80 @@
+{
+  "name": "sw_fpp",
+  "version": "1.0.0",
+  "description": "神威饭票票",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "egg": "^2.15.1",
+    "egg-passport": "^2.0.1",
+    "egg-passport-local": "^1.2.1",
+    "egg-redis": "^2.3.0",
+    "egg-scripts": "^2.11.0",
+    "egg-sequelize": "^4.3.1",
+    "egg-socket.io": "^4.1.5",
+    "egg-view-assets": "^1.4.4",
+    "egg-view-nunjucks": "^2.2.0",
+    "egg-view-vue-ssr": "^3.3.0",
+    "i": "^0.3.6",
+    "mysql2": "^1.6.5",
+    "node-sass": "^4.11.0",
+    "nunjucks": "^3.2.0",
+    "passport-local": "^1.0.0",
+    "sass": "^1.17.3",
+    "vue": "^2.6.10",
+    "vuex": "^3.1.0",
+    "vuex-router-sync": "^5.0.0",
+    "ws": "^6.2.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "autoprefixer": "^9.5.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "easywebpack-cli": "^4.3.4",
+    "easywebpack-vue": "^4.5.0",
+    "egg-bin": "^4.12.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "egg-webpack": "^4.4.9",
+    "egg-webpack-vue": "^2.0.2",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "sequelize-cli": "^5.4.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-sw_fpp",
+    "stop": "egg-scripts stop --title=egg-server-sw_fpp",
+    "dev": "egg-bin dev --sticky",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "RuthlessPotato",
+  "license": "MIT"
+}
