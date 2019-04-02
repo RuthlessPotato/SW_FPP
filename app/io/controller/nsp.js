@@ -6,14 +6,16 @@ class NspController extends Controller {
   async exchange() {
     const { ctx, app } = this;
     const nsp = app.io.of('/');
+
     const message = ctx.args[0] || {};
+    console.log(message);
     const socket = ctx.socket;
     const client = socket.id;
-
     try {
       const { target, payload } = message;
       if (!target) return;
       const msg = ctx.helper.parseMsg('exchange', payload, { client, target });
+      console.log(msg);
       nsp.emit(target, msg);
     } catch (error) {
       app.logger.error(error);

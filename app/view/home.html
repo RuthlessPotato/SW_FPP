@@ -88,6 +88,7 @@
                 query: {
                     room: 'demo',
                     userId: `client_${Math.random()}`,
+                    wxname:"zyp"
                 },
                 transports: ['websocket']
             });
@@ -103,6 +104,9 @@
             socket.on('online', msg => {
                 log('#online,', msg);
             });
+             socket.on('exchange', msg => {
+             log('#exchange,', msg);
+             });
             // 系统事件
             socket.on('disconnect', msg => {
                 log('#disconnect', msg);

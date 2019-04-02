@@ -6,22 +6,19 @@ module.exports = app => {
     DATE,
   } = app.Sequelize;
 
-  const User = app.model.define('user', {
+  const User = app.model.define('record', {
     id: {
       type: INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     wxname: STRING(30),
-    phone: INTEGER,
-    password: STRING(30),
-    numberFpp: INTEGER,
+    location: STRING(30),
     createdAt: DATE,
     updatedAt: DATE,
   },
   {
     freezeTableName: true,
-    timestamps: true,
   });
 
   return User;

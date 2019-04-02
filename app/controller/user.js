@@ -53,6 +53,27 @@ class UserController extends Controller {
       message: 255,
     };
   }
+  async useTicket() {
+    const { ctx, app } = this;
+    const { wxname, location } = ctx.request.body;
+
+    try {
+      await ctx.model.Record.create({
+        wxname: `${wxname}`,
+        location: `${location}`,
+      });
+      ctx.body = {
+        status: 0,
+        message: '成功支付',
+      };
+    } catch (error) {
+      app.logger.error(error);
+      ctx.body = {
+        status: 1,
+        message: '成功失败',
+      };
+    }
+  }
 }
 
 module.exports = UserController;

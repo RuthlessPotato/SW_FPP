@@ -17,6 +17,7 @@ module.exports = app => {
 //     app.passport.doVerify(req, user, done);
 //   }));
   app.beforeStart(async () => {
+    // await app.runSchedule('update_cache');
     const room = await app.redis.get('room:demo');
     if (!room) {
       await app.redis.set('room:demo', 'demo');

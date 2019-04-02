@@ -68,7 +68,7 @@ module.exports = appInfo => {
     },
   };
   config.passportLocal = {
-    usernameField: 'username',
+    usernameField: 'wxname',
     passwordField: 'password',
   };
   config.io = {

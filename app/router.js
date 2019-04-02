@@ -8,7 +8,7 @@ module.exports = app => {
   app.passport.mount('local');
   router.post('/user', controller.user.create);
   router.get('/authCallback', controller.user.authCallback);
-
+  router.post('/useticket', controller.user.useTicket);
   // 渲染登录页面，用户输入账号密码
   router.get('/login', controller.user.login);
   // 登录校验
